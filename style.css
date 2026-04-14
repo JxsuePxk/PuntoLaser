@@ -39,12 +39,20 @@ section {
   border-radius: 10px;
   flex: 1 1 150px;
   text-align: center;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background: #333;
+  transform: scale(1.05);
 }
 
 .galeria {
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
 }
 
@@ -64,25 +72,16 @@ section {
   margin-top: 10px;
 }
 
-/* RESPONSIVE 🔥 */
+/* RESPONSIVE */
 @media (max-width: 768px) {
 
   .cards {
     flex-direction: column;
   }
 
-  .galeria {
-    flex-direction: column;
-    align-items: center;
-  }
-
   nav a {
     display: block;
     margin: 10px 0;
-  }
-
-  header {
-    padding: 20px;
   }
 
 }
