@@ -6,11 +6,8 @@ body {
 }
 
 header {
-  text-align: center;
-  padding: 20px;
-  background: linear-gradient(45deg, #000000, #434343);
+  box-shadow: 0 0 20px rgba(255, 60, 0, 0.5);
 }
-
 .logo {
   width: 150px;
   display: block;
