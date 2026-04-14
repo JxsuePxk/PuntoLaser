@@ -17,72 +17,16 @@
 </nav>
 
 <section>
+  <h2>Selecciona un servicio</h2>
 
-  <!-- ITEM -->
-  <div class="item" onclick="toggle(this)">
-    <h2>Grabado en madera</h2>
-    <div class="contenido">
-      <p>
-        Diseños personalizados sobre madera con acabados precisos y elegantes.
-        Ideal para regalos y decoración.
-      </p>
-      <img src="imagenes/madera.jpg">
-    </div>
+  <div class="cards">
+    <a href="madera.html" class="card">Grabado en madera</a>
+    <a href="acrilico.html" class="card">Corte de acrílico</a>
+    <a href="personalizados.html" class="card">Productos personalizados</a>
+    <a href="llaveros.html" class="card">Llaveros y detalles</a>
+    <a href="disenos.html" class="card">Diseños personalizados</a>
   </div>
-
-  <div class="item" onclick="toggle(this)">
-    <h2>Corte de acrílico</h2>
-    <div class="contenido">
-      <p>
-        Corte limpio en acrílico para letreros, logos y piezas decorativas.
-      </p>
-      <img src="imagenes/acrilico.jpg">
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <h2>Productos personalizados</h2>
-    <div class="contenido">
-      <p>
-        Creamos artículos únicos con diseños a tu medida.
-      </p>
-      <img src="imagenes/personalizado.jpg">
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <h2>Llaveros y detalles</h2>
-    <div class="contenido">
-      <p>
-        Llaveros personalizados ideales para recuerdos y promociones.
-      </p>
-      <img src="imagenes/llaveros.jpg">
-    </div>
-  </div>
-
-  <div class="item" onclick="toggle(this)">
-    <h2>Diseños personalizados</h2>
-    <div class="contenido">
-      <p>
-        Convertimos tus ideas en productos reales con láser.
-      </p>
-      <img src="imagenes/disenos.jpg">
-    </div>
-  </div>
-
-  <a class="btn" href="https://wa.me/593991764272" target="_blank">
-    Consultar por este servicio 📲
-  </a>
-
 </section>
-
-<script>
-function toggle(element){
-  let contenido = element.querySelector(".contenido");
-  contenido.style.display =
-    contenido.style.display === "block" ? "none" : "block";
-}
-</script>
 
 </body>
 </html>
