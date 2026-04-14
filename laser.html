@@ -18,54 +18,56 @@
 
 <section>
 
-  <!-- MADERA -->
-  <div class="card">
+  <!-- ITEM -->
+  <div class="item" onclick="toggle(this)">
     <h2>Grabado en madera</h2>
-    <p>
-      Diseños personalizados sobre madera con acabados precisos y elegantes.
-      Ideal para regalos, decoración y detalles únicos.
-    </p>
-    <img src="imagenes/madera.jpg">
+    <div class="contenido">
+      <p>
+        Diseños personalizados sobre madera con acabados precisos y elegantes.
+        Ideal para regalos y decoración.
+      </p>
+      <img src="imagenes/madera.jpg">
+    </div>
   </div>
 
-  <!-- ACRÍLICO -->
-  <div class="card">
+  <div class="item" onclick="toggle(this)">
     <h2>Corte de acrílico</h2>
-    <p>
-      Corte limpio y exacto en acrílico para letreros, logos y piezas decorativas.
-      Alta calidad y excelente presentación.
-    </p>
-    <img src="imagenes/acrilico.jpg">
+    <div class="contenido">
+      <p>
+        Corte limpio en acrílico para letreros, logos y piezas decorativas.
+      </p>
+      <img src="imagenes/acrilico.jpg">
+    </div>
   </div>
 
-  <!-- PERSONALIZADOS -->
-  <div class="card">
+  <div class="item" onclick="toggle(this)">
     <h2>Productos personalizados</h2>
-    <p>
-      Creamos artículos únicos con diseños a tu medida.
-      Perfecto para regalos, emprendimientos y marcas.
-    </p>
-    <img src="imagenes/personalizado.jpg">
+    <div class="contenido">
+      <p>
+        Creamos artículos únicos con diseños a tu medida.
+      </p>
+      <img src="imagenes/personalizado.jpg">
+    </div>
   </div>
 
-  <!-- LLAVEROS -->
-  <div class="card">
+  <div class="item" onclick="toggle(this)">
     <h2>Llaveros y detalles</h2>
-    <p>
-      Fabricación de llaveros personalizados con diferentes materiales.
-      Ideales para recuerdos y promociones.
-    </p>
-    <img src="imagenes/llaveros.jpg">
+    <div class="contenido">
+      <p>
+        Llaveros personalizados ideales para recuerdos y promociones.
+      </p>
+      <img src="imagenes/llaveros.jpg">
+    </div>
   </div>
 
-  <!-- DISEÑOS -->
-  <div class="card">
+  <div class="item" onclick="toggle(this)">
     <h2>Diseños personalizados</h2>
-    <p>
-      Desarrollo de ideas desde cero con corte y grabado láser.
-      Convertimos tus ideas en productos reales.
-    </p>
-    <img src="imagenes/disenos.jpg">
+    <div class="contenido">
+      <p>
+        Convertimos tus ideas en productos reales con láser.
+      </p>
+      <img src="imagenes/disenos.jpg">
+    </div>
   </div>
 
   <a class="btn" href="https://wa.me/593991764272" target="_blank">
@@ -74,9 +76,13 @@
 
 </section>
 
-<footer>
-  <p>© 2026 Punto-Laser</p>
-</footer>
+<script>
+function toggle(element){
+  let contenido = element.querySelector(".contenido");
+  contenido.style.display =
+    contenido.style.display === "block" ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
