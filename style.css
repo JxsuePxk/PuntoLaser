@@ -17,6 +17,12 @@ header {
   margin: auto;
   border-radius: 15px;
   box-shadow: 0 0 25px rgba(255, 102, 0, 0.5);
+  transition: 0.5s;
+}
+
+.logo:hover {
+  transform: rotate(2deg) scale(1.05);
+}shadow: 0 0 25px rgba(255, 102, 0, 0.5);
 }
 
 nav {
@@ -48,12 +54,13 @@ section {
   border-radius: 10px;
   text-decoration: none;
   color: white;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
   background: #333;
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
 }
 
 .galeria {
@@ -77,4 +84,27 @@ section {
   border-radius: 10px;
   text-decoration: none;
   margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #1ebe5d;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #25D366;
+}
+
+section {
+  padding: 20px;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
