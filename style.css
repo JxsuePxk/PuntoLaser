@@ -5,18 +5,22 @@ body {
   color: white;
 }
 
+/* HEADER */
 header {
   text-align: center;
   padding: 30px;
   background: linear-gradient(135deg, #0d0d0d, #1a1a2e, #2b2b5a);
 }
 
+/* LOGO */
 .logo {
-  width: 180px;
+  width: 150px;
   display: block;
   margin: auto;
-  border-radius: 15px;
-  box-shadow: 0 0 25px rgba(255, 102, 0, 0.5);
+  border-radius: 12px;
+  padding: 8px;
+  background: #111;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.4);
   transition: 0.5s;
 }
 
@@ -24,23 +28,42 @@ header {
   transform: rotate(2deg) scale(1.05);
 }
 
+/* NAV CENTRADO Y SIN BARRA NEGRA */
 nav {
-  text-align: center;
-  background: #000;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+  background: transparent;
 }
 
+/* LINKS NEÓN */
 nav a {
-  color: white;
-  margin: 10px;
+  color: #fff;
   text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: 0.3s;
+  text-shadow: 0 0 5px rgba(255,255,255,0.3),
+               0 0 10px rgba(255,102,0,0.4);
 }
 
+nav a:hover {
+  background: rgba(255, 102, 0, 0.1);
+  text-shadow: 0 0 10px #ff6600,
+               0 0 20px #ff6600,
+               0 0 30px #ff6600;
+  transform: scale(1.1);
+}
+
+/* SECCIONES */
 section {
   padding: 20px;
   animation: fadeIn 1s ease;
 }
 
+/* TARJETAS */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -63,6 +86,7 @@ section {
   box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
 }
 
+/* GALERÍA */
 .galeria {
   display: flex;
   gap: 10px;
@@ -76,6 +100,7 @@ section {
   border-radius: 10px;
 }
 
+/* BOTÓN */
 .btn {
   display: inline-block;
   background: #25D366;
@@ -93,6 +118,7 @@ section {
   box-shadow: 0 0 15px #25D366;
 }
 
+/* ANIMACIÓN */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -107,19 +133,25 @@ section {
 /* BANNER CON NEÓN */
 .banner {
   width: 100%;
-  height: 180px;
-  overflow: hidden;
+  max-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0a0a0a;
   position: relative;
   border-radius: 12px;
+  overflow: hidden;
 }
 
 .banner img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
   display: block;
 }
 
+/* BORDE NEÓN */
 .banner::before {
   content: "";
   position: absolute;
@@ -130,6 +162,7 @@ section {
   filter: blur(10px);
 }
 
+/* GLOW */
 .banner::after {
   content: "";
   position: absolute;
