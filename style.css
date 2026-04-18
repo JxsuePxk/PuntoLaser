@@ -21,8 +21,9 @@ body {
 /* LOGO INTRO (SIN FONDO + NEÓN MORADO) */
 .intro-logo {
   width: 220px;
-  filter: drop-shadow(0 0 25px #a855f7)
-          drop-shadow(0 0 60px #a855f7);
+  filter: drop-shadow(0 0 30px #ff6600)
+          drop-shadow(0 0 70px #ff6600)
+          drop-shadow(0 0 100px #ff6600);
   animation: logoIntro 2.5s ease forwards;
 }
 
