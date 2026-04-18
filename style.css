@@ -109,6 +109,19 @@ section {
   }
 }
 
+/* BANNER SUPERIOR */
+.banner {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* BANNER CON EFECTO NEÓN */
 .banner {
   width: 100%;
