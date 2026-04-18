@@ -22,7 +22,6 @@ header {
 
 .logo:hover {
   transform: rotate(2deg) scale(1.05);
-}shadow: 0 0 25px rgba(255, 102, 0, 0.5);
 }
 
 nav {
@@ -39,6 +38,7 @@ nav a {
 
 section {
   padding: 20px;
+  animation: fadeIn 1s ease;
 }
 
 .cards {
@@ -93,11 +93,6 @@ section {
   box-shadow: 0 0 15px #25D366;
 }
 
-section {
-  padding: 20px;
-  animation: fadeIn 1s ease;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -109,20 +104,7 @@ section {
   }
 }
 
-/* BANNER SUPERIOR */
-.banner {
-  width: 100%;
-  height: 180px;
-  overflow: hidden;
-}
-
-.banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* BANNER CON EFECTO NEÓN */
+/* BANNER CON NEÓN */
 .banner {
   width: 100%;
   height: 180px;
@@ -131,7 +113,6 @@ section {
   border-radius: 12px;
 }
 
-/* Imagen del banner */
 .banner img {
   width: 100%;
   height: 100%;
@@ -139,7 +120,6 @@ section {
   display: block;
 }
 
-/* BORDE NEÓN */
 .banner::before {
   content: "";
   position: absolute;
@@ -150,7 +130,6 @@ section {
   filter: blur(10px);
 }
 
-/* EFECTO GLOW INTERNO */
 .banner::after {
   content: "";
   position: absolute;
