@@ -1,12 +1,12 @@
 body {
   font-family: Arial;
   margin: 0;
-  background: linear-gradient(180deg, #050505 0%, #0a0a0a 50%, #111111 100%);
+  background: linear-gradient(180deg, #050505 0%, #0a0a0a 60%, #120a1a 100%);
   color: white;
   overflow-x: hidden;
 }
 
-/* ===== INTRO PANTALLA COMPLETA ===== */
+/* ===== INTRO ===== */
 .intro {
   position: fixed;
   inset: 0;
@@ -18,7 +18,6 @@ body {
   animation: introFade 4s forwards;
 }
 
-/* LOGO INTRO (NEÓN NARANJA) */
 .intro-logo {
   width: 220px;
   filter: drop-shadow(0 0 30px #ff6600)
@@ -27,32 +26,17 @@ body {
   animation: logoIntro 2.5s ease forwards;
 }
 
-/* ANIMACIÓN LOGO */
 @keyframes logoIntro {
-  0% {
-    transform: scale(0.3);
-    opacity: 0;
-  }
-  40% {
-    transform: scale(2.8);
-    opacity: 1;
-  }
-  70% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
+  0% { transform: scale(0.3); opacity: 0; }
+  40% { transform: scale(2.8); opacity: 1; }
+  70% { transform: scale(1.2); }
+  100% { transform: scale(1); }
 }
 
-/* DESAPARECE INTRO */
 @keyframes introFade {
   0% { opacity: 1; }
   70% { opacity: 1; }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
+  100% { opacity: 0; visibility: hidden; }
 }
 
 /* ===== HEADER ===== */
@@ -62,13 +46,11 @@ header {
   background: transparent;
 }
 
-/* LOGO NORMAL */
 .logo {
   width: 150px;
   display: block;
   margin: auto;
   border-radius: 12px;
-  background: transparent;
   box-shadow: 0 0 15px rgba(168, 85, 247, 0.5),
               0 0 35px rgba(168, 85, 247, 0.4);
 }
@@ -79,21 +61,38 @@ nav {
   justify-content: center;
   gap: 25px;
   padding: 20px;
-  background: transparent;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
   padding: 8px 12px;
-  text-shadow: 0 0 8px rgba(168,85,247,0.5);
+  text-shadow: 0 0 10px rgba(168,85,247,0.6);
   transition: 0.3s;
 }
 
 nav a:hover {
   transform: scale(1.1);
-  text-shadow: 0 0 15px #a855f7,
-               0 0 30px #a855f7;
+  text-shadow: 0 0 20px #a855f7;
+}
+
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.hero h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 20px #a855f7;
+}
+
+.hero p {
+  color: #aaa;
+  font-size: 14px;
 }
 
 /* ===== SECCIONES ===== */
@@ -102,26 +101,32 @@ section {
   animation: fadeIn 1s ease;
 }
 
-/* ===== TARJETAS ===== */
+/* ===== CARDS ===== */
 .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
   justify-content: center;
+  max-width: 900px;
+  margin: auto;
 }
 
 .card {
-  background: #222;
+  background: linear-gradient(145deg, #1a1a1a, #222);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   color: white;
   text-decoration: none;
+  width: 200px;
+  text-align: center;
   transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
 .card:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 20px #a855f7;
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.6),
+              0 0 40px rgba(255, 102, 0, 0.4);
 }
 
 /* ===== GALERÍA ===== */
@@ -135,6 +140,11 @@ section {
 .galeria img {
   max-width: 250px;
   border-radius: 10px;
+  transition: 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
 }
 
 /* ===== BOTÓN ===== */
@@ -154,28 +164,23 @@ section {
   box-shadow: 0 0 15px #25D366;
 }
 
-/* ===== BANNER RESPONSIVE + NEÓN ===== */
+/* ===== BANNER ===== */
 .banner {
   width: 100%;
   margin: 20px auto;
   display: flex;
   justify-content: center;
-  align-items: center;
   position: relative;
-  border-radius: 12px;
 }
 
 .banner img {
   width: 90%;
-  max-width: 650px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: auto;
+  max-width: 600px;
+  border-radius: 12px;
   z-index: 1;
 }
 
-/* BORDE NEÓN */
+/* NEÓN */
 .banner::before {
   content: "";
   position: absolute;
@@ -186,26 +191,18 @@ section {
   z-index: 0;
 }
 
-/* GLOW SUAVE */
-.banner::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4),
-              0 0 30px rgba(255, 102, 0, 0.3);
-  z-index: 0;
-}
-
-/* RESPONSIVE CELULAR */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
   .banner img {
-    width: 95%;
     max-width: 300px;
+  }
+
+  .card {
+    width: 90%;
   }
 }
 
-/* ===== ANIMACIÓN GENERAL ===== */
+/* ===== ANIMACIÓN ===== */
 @keyframes fadeIn {
   from {
     opacity: 0;
