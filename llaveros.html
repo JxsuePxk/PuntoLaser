@@ -8,8 +8,9 @@
 </head>
 <body>
 
-<header>
-  <h1>Llaveros y detalles</h1>
+<!-- ===== BANNER ===== -->
+<header class="banner">
+  <img src="banner.png" alt="Banner Punto-Laser">
 </header>
 
 <nav>
@@ -17,35 +18,58 @@
 </nav>
 
 <section>
-  <p>
-    Ofrecemos llaveros y detalles personalizados hechos a tu gusto. Puedes elegir nombres, frases o diseños especiales. Son perfectos para regalos, recuerdos o ocasiones especiales, con buen acabado y materiales de calidad.
+  <h2 style="text-align:center; text-shadow:0 0 15px #a855f7;">
+    Llaveros y detalles
+  </h2>
+
+  <p style="text-align:center; color:#aaa; max-width:600px; margin:auto;">
+    Ofrecemos llaveros y detalles personalizados hechos a tu gusto. 
+    Ideales para regalos, recuerdos o ocasiones especiales.
   </p>
 
   <div class="galeria">
-    <img src="llavero1.jpg"> 
-    <img src="llavero2.jpg"> 
-    <img src="llavero3.jpg">
-    <img src="llavero4.jpg"> 
-    <img src="llavero5.jpg"> 
-    <img src="llavero6.jpg">
-    <img src="llavero7.jpg"> 
-    <img src="llavero8.jpg"> 
-    <img src="llavero9.jpg">
-    <img src="llavero10.jpg"> 
-    <img src="llavero11.jpg"> 
-    <img src="llavero12.jpg">
-    <img src="llavero13.jpg"> 
-    <img src="llavero14.jpg"> 
-    <img src="llavero15.jpg">
-    <img src="llavero16.jpg"> 
-    <img src="llavero17.jpg"> 
-    <img src="llavero18.jpg">
+    <img src="llavero1.jpg" onclick="abrirImagen(this)"> 
+    <img src="llavero2.jpg" onclick="abrirImagen(this)"> 
+    <img src="llavero3.jpg" onclick="abrirImagen(this)">
+    <img src="llavero4.jpg" onclick="abrirImagen(this)"> 
+    <img src="llavero5.jpg" onclick="abrirImagen(this)"> 
+    <img src="llavero6.jpg" onclick="abrirImagen(this)">
+    <img src="llavero7.jpg" onclick="abrirImagen(this)"> 
+    <img src="llavero8.jpg" onclick="abrirImagen(this)"> 
+    <img src="llavero9.jpg" onclick="abrirImagen(this)">
+    <img src="llavero10.jpg" onclick="abrirImagen(this)"> 
+    <img src="llavero11.jpg" onclick="abrirImagen(this)"> 
+    <img src="llavero12.jpg" onclick="abrirImagen(this)">
+    <img src="llavero13.jpg" onclick="abrirImagen(this)"> 
+    <img src="llavero14.jpg" onclick="abrirImagen(this)"> 
+    <img src="llavero15.jpg" onclick="abrirImagen(this)">
+    <img src="llavero16.jpg" onclick="abrirImagen(this)"> 
+    <img src="llavero17.jpg" onclick="abrirImagen(this)"> 
+    <img src="llavero18.jpg" onclick="abrirImagen(this)">
   </div>
 
-  <a class="btn" href="https://wa.me/593991764272" target="_blank">
-    Consultar 📲
-  </a>
+  <div style="text-align:center;">
+    <a class="btn" href="https://wa.me/593991764272" target="_blank">
+      Consultar 📲
+    </a>
+  </div>
 </section>
+
+<!-- ===== VISOR DE IMAGEN ===== -->
+<div id="visor" onclick="cerrarImagen()">
+  <img id="imgGrande">
+</div>
+
+<script>
+function abrirImagen(img) {
+  document.getElementById("visor").style.display = "flex";
+  document.getElementById("imgGrande").src = img.src;
+}
+
+function cerrarImagen() {
+  document.getElementById("visor").style.display = "none";
+}
+</script>
 
 </body>
 </html>
