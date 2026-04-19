@@ -55,12 +55,13 @@ body {
   }
 }
 
-/* ===== HEADER NORMAL ===== */
+/* ===== HEADER ===== */
 header {
   text-align: center;
   padding: 20px;
   background: transparent;
 }
+
 /* LOGO NORMAL */
 .logo {
   width: 150px;
@@ -156,7 +157,6 @@ section {
 /* ===== BANNER RESPONSIVE + NEÓN ===== */
 .banner {
   width: 100%;
-  max-height: 180px;
   margin: 20px auto;
   display: flex;
   justify-content: center;
@@ -166,11 +166,12 @@ section {
 }
 
 .banner img {
-  width: 100%;
-  max-width: 800px;
+  width: 90%;
+  max-width: 650px;
   height: auto;
   object-fit: contain;
   display: block;
+  margin: auto;
   z-index: 1;
 }
 
@@ -185,25 +186,22 @@ section {
   z-index: 0;
 }
 
-/* GLOW */
+/* GLOW SUAVE */
 .banner::after {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 12px;
-  box-shadow: 0 0 25px rgba(168, 85, 247, 0.5),
-              0 0 40px rgba(255, 102, 0, 0.4);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4),
+              0 0 30px rgba(255, 102, 0, 0.3);
   z-index: 0;
 }
 
 /* RESPONSIVE CELULAR */
 @media (max-width: 600px) {
-  .banner {
-    max-height: 120px;
-  }
-
   .banner img {
-    max-width: 100%;
+    width: 95%;
+    max-width: 300px;
   }
 }
 
