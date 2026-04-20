@@ -235,3 +235,35 @@ section {
 * {
   box-sizing: border-box;
 }
+
+/* ===== CARD CON IMAGEN ===== */
+.card-img {
+  padding: 15px;
+  overflow: hidden;
+}
+
+.card-img h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* IMAGEN DENTRO */
+.card-img img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* EFECTO HOVER */
+.card-img:hover img {
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+  .card-img img {
+    height: 120px;
+  }
+}
