@@ -6,7 +6,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ===== INTRO ===== */
 .intro {
   position: fixed;
   inset: 0;
@@ -26,20 +25,6 @@ body {
   animation: logoIntro 2.5s ease forwards;
 }
 
-@keyframes logoIntro {
-  0% { transform: scale(0.3); opacity: 0; }
-  40% { transform: scale(2.8); opacity: 1; }
-  70% { transform: scale(1.2); }
-  100% { transform: scale(1); }
-}
-
-@keyframes introFade {
-  0% { opacity: 1; }
-  70% { opacity: 1; }
-  100% { opacity: 0; visibility: hidden; }
-}
-
-/* ===== HEADER ===== */
 header {
   text-align: center;
   padding: 20px;
@@ -55,7 +40,6 @@ header {
               0 0 35px rgba(168, 85, 247, 0.4);
 }
 
-/* ===== NAV ===== */
 nav {
   display: flex;
   justify-content: center;
@@ -78,7 +62,6 @@ nav a:hover {
   text-shadow: 0 0 20px #a855f7;
 }
 
-/* ===== HERO ===== */
 .hero {
   text-align: center;
   padding: 30px 20px;
@@ -95,13 +78,11 @@ nav a:hover {
   font-size: 14px;
 }
 
-/* ===== SECCIONES ===== */
 section {
   padding: 20px;
   animation: fadeIn 1s ease;
 }
 
-/* ===== CARDS ===== */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -129,7 +110,6 @@ section {
               0 0 40px rgba(255, 102, 0, 0.4);
 }
 
-/* ===== GALERÍA ===== */
 .galeria {
   display: flex;
   gap: 10px;
@@ -149,7 +129,6 @@ section {
   box-shadow: 0 0 15px #a855f7;
 }
 
-/* ===== BOTÓN ===== */
 .btn {
   background: #25D366;
   padding: 12px 20px;
@@ -166,7 +145,6 @@ section {
   box-shadow: 0 0 15px #25D366;
 }
 
-/* ===== BANNER ===== */
 .banner {
   width: 100%;
   max-width: 100%;
@@ -198,21 +176,17 @@ section {
   z-index: 0;
 }
 
-/* ===== VISOR IMAGEN (MEJORADO) ===== */
 #visor {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-
   display: none;
   justify-content: center;
   align-items: center;
-
-  backdrop-filter: blur(10px); /* 🔥 fondo difuminado */
+  backdrop-filter: blur(10px);
   background: rgba(0, 0, 0, 0.4);
-
   z-index: 9999;
   cursor: zoom-out;
 }
@@ -221,12 +195,9 @@ section {
   max-width: 85%;
   max-height: 85%;
   border-radius: 12px;
-
-  /* ❌ SIN NEÓN */
   box-shadow: none;
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 500px) {
   .banner img {
     max-width: 300px;
@@ -237,7 +208,6 @@ section {
   }
 }
 
-/* ===== ANIMACIÓN ===== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -249,7 +219,19 @@ section {
   }
 }
 
-/* ===== FIX GLOBAL ===== */
+@keyframes logoIntro {
+  0% { transform: scale(0.3); opacity: 0; }
+  40% { transform: scale(2.8); opacity: 1; }
+  70% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes introFade {
+  0% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
 * {
   box-sizing: border-box;
 }
